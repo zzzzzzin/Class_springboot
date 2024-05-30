@@ -20,8 +20,12 @@
             - unescaped text
             - innerHTML
 
-       인라인 출력
-            - th:inline
+        인라인 출력
+            - th:inline="text" (기본값)
+            - th:inline="javascript"
+            - th:inline + [[]] //escaped text
+            - th:inline + [()] //unescaped text
+
     */-->
     <div th:text="${txt1}"></div>
     <div th:utext="${txt1}"></div>
@@ -52,5 +56,39 @@
         <div th:inline="text">이름: [[${name}]]</div>
         <div>이름: [[${name}]]</div>
 
+    <hr>
+
+    <div id="list">
+
+    </div>
+
+    <!-- 타임리프 표현식을 사용해서 자바스크립트 조작 -->
+    <script>
+        //let name1 = '${name}';
+        //let name1 = [[${name}]];
+        let name1 = '[[${name}]]';
+        let num1 = [[${num}]];
+        let dto1 = '[[${dto}]]';
+        let map1 = '[[${map}]]';
+        let names1 = '[[${names}]]';
+        let lsit1 = '[[${list}]]';
+    </script>
+
+    <!-- inline="javascrip" > 자동으로 바인딩(숫자 <-> 문자열) -->
+    <script th:inline="javascript">
+        let name2 = '[[${name}]]';
+        let num2 = [[${num}]];
+        let dto2 = [[${dto}]];
+        let map2 = [[${map}]];
+        let names2 = [[${names}]];
+        let lsit2 = [[${list}]];
+
+        list2.forEach(item => {
+            document.getElementById("list").innerHTML += `
+            <div>${item.name} - ${item.age} - ${item.address}</div>
+           `;
+        });
+
+    </script>
 </body>
 </html>

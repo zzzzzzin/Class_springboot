@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
+</head>
+<body>
+    <h1>포멧팅</h1>
+    <h2>숫자</h2>
+
+    <div th:text="${num1}"></div> <!--1234567-->
+    <div th:text="${#numbers.formatInteger(num1, 3, 'COMMA')}"></div> <!--1,234,567-->
+
+    <div th:text="${num2}"></div> <!--12345.6789-->
+    <div th:text="${#numbers.formatInteger(num2, 3, 'COMMA')}"></div> <!--12,346-->
+    <div th:text="${#numbers.formatDecimal(num2, 3, 'COMMA', 1, 'POINT')}"></div> <!--12,345.7-->
+
+
+</body>
+</html>
