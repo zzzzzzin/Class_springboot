@@ -37,8 +37,11 @@ public class Address {
                 .build();
     }
 
-    public void updateAddress(String 서울특별시_강동구, int i) {
+    public void updateAddress(String address, Integer age) {
+        this.address = address;
+        this.age = age;
     }
+
 }
 
 

@@ -17,6 +17,10 @@ public class AddressDTO {
     private String address;
     private String gender;
 
+    //JPQL 멤버
+    private String city;
+    private int birth;
+
     public static Address toEntity(AddressDTO dto) {
         //DTO > Entity
         return Address.builder()
