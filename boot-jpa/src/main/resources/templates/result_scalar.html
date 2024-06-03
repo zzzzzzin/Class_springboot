@@ -14,5 +14,18 @@
 
 <div th:text="${result}"></div>
 
+<div th:if="${addressTuple != null}">
+    <div th:text="${addressTuple.get(0, Long)}"></div>
+    <div th:text="${addressTuple.get(1, Double)}"></div>
+</div>
+
 </body>
 </html>
+
+
+
+
+
+
+
+

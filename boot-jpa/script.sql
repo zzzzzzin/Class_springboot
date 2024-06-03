@@ -497,6 +497,6 @@ insert into tblMemo values (98, '나중에 뭐 할 거야? 강아지 울음소리~', sysdate -
 insert into tblMemo values (99, '키보드 배송중!!', sysdate - 1.4314, 9);
 insert into tblMemo values (100, '최근에 들은 소식 있어? 콩콩~', sysdate, 1);
 
-
+select * from tblMemo;
 
 commit;

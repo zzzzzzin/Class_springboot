@@ -37,6 +37,12 @@ ORM
 - "com.test.bootjpa.dto" > "AddressDTO.java"
 
 
+추가 생성
+- com.test.bootjpa.entity > "Info.java"
+                          > "Memo.java"
+
+- com.test.bootjap.repository > "InfoRepository.java"(I)
+                              > "MemoRepository.java"(I)
 
 
 

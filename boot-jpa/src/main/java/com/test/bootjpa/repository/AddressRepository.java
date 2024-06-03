@@ -82,7 +82,8 @@ public interface AddressRepository extends JpaRepository<Address, Long> {
 
 
     //JPQL
-    @Query("select a.name from Address as a")
+    //@Query("select a.name from Address as a")
+    @Query(value = "select name from tblAddress", nativeQuery = true)
     List<String> listName();
 
     @Query("select a from Address as a")
